@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link src="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <h1>Inventory List</h1>
+    <table>
+        <tr>
+            <td class="input">
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label>Product Code</label>
+                        <input type="text" id="productCode" placeholder="Product Code">
+                    </div>
+                    <div>
+                        <label>Product Name</label>
+                        <input type="text" id="product" class="form-control" placeholder="Product Name">
+                    </div>
+                    <div>
+                        <label>Quantity</label>
+                        <input type="number" id="qty" class="form-control" placeholder="Quantity">
+                    </div>
+                    <div>
+                        <label>Cost</label>
+                        <input type="number" id="perCost" class="form-control" placeholder="Cost/Unit">
+                    </div>
+                    <div>
+                        <label>MSRP</label>
+                        <input type="number" id="msrp" class="form-control" placeholder="MSRP">
+                    </div>
+
+                    <button id="creat-new-entry" class="btn btn-primary form-control">Submit</button>
+                </form>
+
+                <td>
+                    <table class="list" id="itemList">
+                        <thead>
+                            <tr>
+                                <th>Product Code</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Cost</th>
+                                <th>MSRP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
